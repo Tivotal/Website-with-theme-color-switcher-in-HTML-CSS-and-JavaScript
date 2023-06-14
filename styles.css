@@ -1,0 +1,222 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --color-theme: #4070f4;
+  --color-navbar: #fff;
+  --color-primary: #24292d;
+  --switch-bg: #f5f0f0;
+  --color-bg: #fff;
+  --color-logo: #4070f4;
+  --text-color: #24292d;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+nav {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  background: var(--color-navbar);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .navbar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+
+nav .navbar .logo {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--color-logo);
+}
+
+.navbar .nav-links {
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin: 0 8px;
+  display: flex;
+}
+
+.navbar .nav-links a {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-primary);
+  opacity: 0.8;
+}
+
+.navbar .nav-links a:hover {
+  opacity: 1;
+}
+
+.navbar .appearance {
+  display: flex;
+  align-items: center;
+}
+
+.appearance .dark,
+.appearance .switch-header {
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  line-height: 50px;
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 20px;
+  background: var(--switch-bg);
+  cursor: pointer;
+}
+
+.appearance .dark:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.appearance .dark i {
+  height: 100%;
+  width: 100%;
+}
+
+.appearance .color-switcher {
+  position: relative;
+}
+
+.appearance .switch-header {
+  width: 70px;
+  height: 50px;
+  margin-left: 14px;
+}
+
+.appearance .color-box {
+  position: absolute;
+  bottom: -133px;
+  right: 0;
+  min-height: 100px;
+  background: var(--color-bg);
+  padding: 16px 20px 20px 20px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.color-switcher.open .color-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.color-box::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  background: var(--color-bg);
+  transform: rotate(45deg);
+}
+
+.color-switcher.open .arrow {
+  transform: rotate(-180deg);
+}
+
+.appearance .color-box h3 {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  text-align: left;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+
+.appearance .color-box .color-btns {
+  display: flex;
+}
+
+.color-box .color-btns .btn {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  background: var(--def);
+}
+
+.color-btns .btn.active {
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 3px var(--def);
+}
+
+.color-btns .btn.white.active {
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-theme);
+}
+
+.home-content {
+  height: 100vh;
+  width: 100%;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+  color: var(--text-color);
+}
+
+.home-content h2 {
+  font-size: 50px;
+}
+
+.home-content h3 {
+  font-size: 42px;
+  margin-top: -8px;
+}
+
+.home-content h3 span {
+  color: var(--color-theme);
+}
+
+.home-content p {
+  font-size: 16px;
+  width: 45%;
+  text-align: justify;
+  margin: 4px 0 30px 0;
+}
+
+.home-content a {
+  background: var(--color-theme);
+  color: #fff;
+  font-size: 20px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: 2px solid var(--color-theme);
+}
+
+.home-content a:hover {
+  background: transparent;
+  color: var(--color-theme);
+}
+
+@media (max-width: 1050px) {
+  .home-content p {
+    width: 70%;
+  }
+}

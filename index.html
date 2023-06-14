@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Theme Switcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  
+    <!--css file-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+          <a href="#" class="logo">Tivotal</a>
+
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <div class="appearance">
+            <div class="dark">
+              <i class="btn fas fa-moon" data-color="#3c4b75 #1a1818 #bab8b8 #121212 #242323 #3c4b75 #bab8b8"></i>
+            </div>
+
+            <div class="color-switcher">
+              <div class="switch-header">
+                <i class="fas fa-palette"></i>
+                <i class="fas fa-sort-down arrow"></i>
+              </div>
+
+              <div class="color-box">
+                <h3>Select Theme</h3>
+                <div class="color-btns">
+                  <button class="btn white active" style="--def: #fff" data-color="#4070f4 #fff #24292d #f5f0f0 #fff #4070f4 #24292d"></button>
+                  <button class="btn blue" style="--def: #4070f4" data-color="#4070f4 #4070f4 #fff #275ef2 #e6ebf7 #fff #24292d"></button>
+                  <button class="btn red" style="--def: #ff1212" data-color="#ff1212 #ff1212 #fff #ed2626 #f7e6e6 #fff #24292d"></button>
+                  <button class="btn green" style="--def: #1b9410" data-color="#1b9410 #1b9410 #fff #1e8a15 #f1fcf0 #fff #24292d"></button>
+                  <button class="btn purple" style="--def: #650e87" data-color="#650e87 #650e87 #fff #6d208c #fbf0ff #fff #24292d"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="home-content">
+        <div class="texts">
+          <h2 class="text">Make Your Website </h2>
+          <h3 class="text">With <span>Tivotal Themes...</span></h3>
+          <p>Lorem ipsum dolor sited and ametvel, nobised, minimali! Quibusdam temporibus, placeate reessed veritatis optio aliquam illum debitis at, perspiciatis consequatur iure vel, quae ratione. Praesentium, at.</p>
+          <div class="button">
+          <a href="#">Exlore Theme Store</a>
+        </div>
+      </section>
+
+
+      <script src="app.js"></script>
+</body>
+</html>
